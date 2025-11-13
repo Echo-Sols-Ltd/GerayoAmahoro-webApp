@@ -16,7 +16,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white shadow-sm border-b sticky top-0 z-40">
+    <nav className="bg-white shadow-sm text-medium font-bold border-b sticky top-0 z-40">
       <div className="px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4 flex-1">
           <Menu className="w-5 h-5 text-gray-600" />
@@ -25,7 +25,7 @@ export default function Navigation() {
             <input
               type="text"
               placeholder="Search"
-              className="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-lg text-sm text-gray-700 placeholder-gray-400"
+              className="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-lg text-medium text-gray-700 placeholder-gray-400"
             />
           </div>
         </div>
@@ -38,9 +38,9 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm ${
+                  className={`text-medium ${
                     isActive
-                      ? 'font-medium text-gray-900'
+                      ? 'font-bold text-gray-900'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
