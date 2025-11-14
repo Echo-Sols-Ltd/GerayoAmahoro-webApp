@@ -180,7 +180,7 @@ export default function TrackingPage() {
       </div>
 
       {/* Right Column - Ongoing Delivery */}
-      <div className="space-y-6">
+      <div className="space-y-6 font-semibold">
           <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <h3 className="font-bold text-lg text-gray-900">Ongoing Delivery</h3>
@@ -229,12 +229,12 @@ export default function TrackingPage() {
             </div>
 
             {/* Order Details */}
-            <div className="p-4 space-y-4">
-              <div className="flex justify-between">
+            <div className="p-4 space-y-4 w-[285px]">
+              <div className="flex justify-between border-b">
                 <div className="">
-                  <div className="text-xs text-gray-500 mb-1">Order number</div>
+                  <div className="text-sm text-gray-500 mb-1">Order number</div>
                   <div className="text-lg font-bold text-gray-900 mb-1">78965432</div>
-                  <div className="text-xs text-gray-500">Food materials</div>
+                  <div className="text-sm text-gray-500">Food materials</div>
                 </div>
                 <div>
                   <Image
@@ -252,18 +252,18 @@ export default function TrackingPage() {
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
                   <div className="min-w-0">
-                    <div className="text-xs font-semibold text-green-600 mb-1">Sender</div>
-                    <div className="text-sm font-medium text-gray-900">Mr Kapoof</div>
-                    <div className="text-xs text-gray-500">Kigali, West Africa</div>
+                    <div className="text-sm font-semibold text-green-600 mb-1">Sender</div>
+                    <div className="text-medium font-medium text-gray-900">Mr Kapoof</div>
+                    <div className="text-sm font-bold text-gray-500">Kigali, West Africa</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                   <div className="min-w-0">
-                    <div className="text-xs font-semibold text-orange-600 mb-1">Receiver</div>
-                    <div className="text-sm font-medium text-gray-900">Mr Kapoof</div>
-                    <div className="text-xs text-gray-500">Kigali, West Africa</div>
+                    <div className="text-sm font-semibold text-orange-600 mb-1">Receiver</div>
+                    <div className="text-medium font-medium text-gray-900">Mr Kapoof</div>
+                    <div className="text-sm font-bold text-gray-500">Kigali, West Africa</div>
                   </div>
                 </div>
               </div>
@@ -286,10 +286,10 @@ export default function TrackingPage() {
                   </div>
                   <div className="flex gap-2">
                     <button className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                      <Phone className="w-4 h-4 text-blue-600" />
+                      <Phone fill="#344B77" className="w-4 h-4 text-[#344B77]" />
                     </button>
                     <button className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                      <MessageSquare className="w-4 h-4 text-blue-600" />
+                      <MessageSquare className="w-4 h-4 text-[#344B77]" />
                     </button>
                   </div>
                 </div>
