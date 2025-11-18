@@ -19,10 +19,12 @@ interface ParcelData {
 }
 
 interface TableColumn {
-  key: keyof ParcelData | 'status';
+  key: keyof ParcelData;
   label: string;
   render?: (value: any, row: ParcelData) => React.ReactNode;
 }
+
+type SimpleKeys = Exclude<keyof ParcelData, 'status'>
 
 export default function TrackingPage() {
   // Sample parcel data - this can be replaced with API data
@@ -103,11 +105,13 @@ export default function TrackingPage() {
   ];
   
   // Function to render table cell content
-  const renderCellContent = (column: TableColumn, row: ParcelData) => {
+  const renderCellContent = (column: TableColumn, row: ParcelData): React.ReactNode => {
     if (column.render) {
-      return column.render(row[column.key], row);
+      return column.render(row[column.key], row)
     }
-    return row[column.key as keyof ParcelData];
+    const key = column.key as SimpleKeys
+    const value: string = row[key]
+    return value
   };
 
   return (

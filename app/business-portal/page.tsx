@@ -20,10 +20,12 @@ interface DeliveryData {
 }
 
 interface TableColumn {
-  key: keyof DeliveryData | 'status';
+  key: keyof DeliveryData;
   label: string;
   render?: (value: any, row: DeliveryData) => React.ReactNode;
 }
+
+type SimpleKeys = Exclude<keyof DeliveryData, 'status'>
 
 export default function Dashboard() {
   const [currentDate, setCurrentDate] = useState(new Date())
@@ -97,11 +99,14 @@ export default function Dashboard() {
   ];
   
   // Function to render table cell content
-  const renderCellContent = (column: TableColumn, row: DeliveryData) => {
+  const renderCellContent = (column: TableColumn, row: DeliveryData): React.ReactNode => {
     if (column.render) {
-      return column.render(row[column.key], row);
+      return column.render(row[column.key], row)
     }
-    return row[column.key as keyof DeliveryData];
+    // Only simple keys should reach here (strings like type, senderAddress, ...)
+    const key = column.key as SimpleKeys
+    const value: string = row[key]
+    return value
   };
 
   const getDaysInMonth = (date: Date) => {
@@ -119,9 +124,9 @@ export default function Dashboard() {
   const isCurrentMonth = currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear()
   const currentDay = isCurrentMonth ? today.getDate() : null
 
-  const calendarDays = Array.from({ length: firstDay }, () => null).concat(
-    Array.from({ length: daysInMonth }, (_, i) => i + 1),
-  )
+  const leadingNulls = Array.from({ length: firstDay }).map(() => null as null)
+  const monthDays = Array.from({ length: daysInMonth }, (_, i) => i + 1)
+  const calendarDays: (number | null)[] = [...leadingNulls, ...monthDays]
 
   // Calendar navigation functions
   const goToPreviousMonth = () => {
