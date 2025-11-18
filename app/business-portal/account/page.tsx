@@ -113,7 +113,7 @@ export default function AccountPage() {
             </div>
 
             <div className="flex justify-end mt-8">
-              <button className="px-8 py-3 bg-blue-900 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors">
+              <button className="px-8 py-3 bg-[#344B77] text-white font-medium rounded-lg hover:bg-blue-800 transition-colors">
                 Save Changes
               </button>
             </div>
@@ -229,11 +229,11 @@ export default function AccountPage() {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-8">
-              <button className="px-6 py-3 bg-green-100 text-green-700 font-medium rounded-lg hover:bg-green-200 transition-colors">
+            <div className="flex gap-4 mt-8 justify-end">
+              <button className="px-6 py-3 bg-[#027A4840] text-[#344B77] font-semibold rounded-lg hover:bg-green-200 transition-colors">
                 Add Account
               </button>
-              <button className="px-8 py-3 bg-blue-900 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors">
+              <button className="px-8 py-3 bg-[#344B77] text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors">
                 Save Changes
               </button>
             </div>
@@ -312,9 +312,11 @@ export default function AccountPage() {
               </label>
             </div>
 
-            <button className="w-full py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors">
-              Delete Account
-            </button>
+            <div className="flex justify-end">
+              <button className="w-[315px] px-4 py-3 bg-red-600 text-white font-semibold cursor-pointer rounded-lg hover:bg-red-500 transition-colors">
+                Delete Account
+              </button>
+            </div>
           </div>
         )}
       </div>

@@ -165,7 +165,7 @@ export default function TrackingPage() {
                   {parcelData.map((row, index) => (
                     <tr key={row.id} className={`hover:bg-gray-50 ${index < parcelData.length - 1 ? "border-b border-gray-100" : ""}`}>
                       {tableColumns.map((column) => (
-                        <td key={`${row.id}-${column.key}`} className={`py-4 px-4 ${column.key === 'type' || column.key === 'price' ? 'text-gray-900 font-medium' : 'text-gray-600'}`}>
+                        <td key={`${row.id}-${column.key}`} className={`py-4 px-4 ${column.key === 'type' || column.key === 'price' ? 'text-gray-900 font-semibold' : 'text-gray-600 font-semibold'}`}>
                           {renderCellContent(column, row)}
                         </td>
                       ))}
@@ -282,14 +282,14 @@ export default function TrackingPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-xs text-gray-500">Driver</div>
-                    <div className="text-sm font-medium text-gray-900">Like Jenny</div>
+                    <div className="text-sm font-bold text-gray-900">Like Jenny</div>
                   </div>
                   <div className="flex gap-2">
                     <button className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                      <Phone fill="#344B77" className="w-4 h-4 text-[#344B77]" />
+                      <Phone fill="#344B77" className="cursor-pointer w-4 h-4 text-[#344B77]" />
                     </button>
                     <button className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                      <MessageSquare className="w-4 h-4 text-[#344B77]" />
+                      <MessageSquare className="cursor-pointer w-4 h-4 text-[#344B77]" />
                     </button>
                   </div>
                 </div>

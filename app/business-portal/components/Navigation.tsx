@@ -56,7 +56,7 @@ export default function Navigation() {
                     className={`text-medium ${
                       isActive
                         ? 'font-bold text-gray-900'
-                        : 'text-gray-600 hover:text-gray-900'
+                        : 'text-[#686868] hover:text-gray-900'
                     }`}
                   >
                     {item.name}
@@ -109,7 +109,7 @@ export default function Navigation() {
                     className={`text-medium py-2 ${
                       isActive
                         ? 'font-bold text-gray-900'
-                        : 'text-gray-600 hover:text-gray-900'
+                        : 'text-[#686868] hover:text-gray-900'
                     }`}
                   >
                     {item.name}

@@ -34,11 +34,12 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">General Settings</h3>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="p-4 md:p-6">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">General Settings</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {/* Company Name */}
           <div>
             <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -50,7 +51,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="companyName"
               value={formData.companyName}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
@@ -65,7 +66,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
@@ -80,7 +81,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
@@ -95,7 +96,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="address"
               value={formData.address}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
@@ -109,7 +110,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="timezone"
               value={formData.timezone}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="Africa/Kigali">Africa/Kigali (CAT)</option>
               <option value="UTC">UTC</option>
@@ -128,7 +129,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="language"
               value={formData.language}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="en">English</option>
               <option value="rw">Kinyarwanda</option>
@@ -147,7 +148,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="currency"
               value={formData.currency}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="RWF">Rwandan Franc (RWF)</option>
               <option value="USD">US Dollar (USD)</option>
@@ -166,7 +167,7 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
               name="dateFormat"
               value={formData.dateFormat}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 bg-[#344B774D] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="DD/MM/YYYY">DD/MM/YYYY</option>
               <option value="MM/DD/YYYY">MM/DD/YYYY</option>
@@ -216,21 +217,22 @@ export default function SettingsForm({ onSave, saving }: SettingsFormProps) {
       </div>
 
       {/* Save Button */}
-      <div className="flex justify-end space-x-3">
+      <div className="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3">
         <button
           type="button"
-          className="px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50"
+          className="w-full sm:w-auto px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50"
         >
           Cancel
         </button>
         <button
           type="submit"
           disabled={saving}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {saving ? 'Saving...' : 'Save Changes'}
         </button>
       </div>
     </form>
+    </div>
   );
 }
