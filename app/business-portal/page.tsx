@@ -149,10 +149,10 @@ export default function Dashboard() {
 
             <div className="text-sm text-gray-500 mb-4">111 2333 4444 555 66  6 775</div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button className="px-4 sm:px-6 py-2 bg-[#344B77] text-white text-xs sm:text-sm font-semibold rounded-lg hover:bg-[#344B89] cursor-pointer">
+              <button className="px-4 sm:px-6 py-2 bg-[#344B77] text-white text-xs sm:text-sm font-semibold rounded-lg hover:bg-[#344B89] transition-colors">
                 Make Transactions
               </button>
-              <button className="px-4 sm:px-6 py-2 bg-gray-200 text-[#344B77] text-xs sm:text-sm font-semibold rounded-lg hover:bg-gray-300 cursor-pointer">
+              <button className="px-4 sm:px-6 py-2 bg-gray-200 text-[#344B77] text-xs sm:text-sm font-semibold rounded-lg hover:bg-gray-300 transition-colors">
                 Switch Accounts
               </button>
             </div>
@@ -279,7 +279,7 @@ export default function Dashboard() {
                       day === currentDay
                         ? "bg-[#344B774D] text-black font-semibold"
                         : day
-                          ? "text-gray-500 hover:bg-gray-100 cursor-pointer"
+                          ? "text-gray-500 hover:bg-gray-100 transition-colors"
                           : ""
                     }`}
                   >
@@ -319,10 +319,10 @@ export default function Dashboard() {
             <p className="text-xs sm:text-sm text-gray-500 leading-tight">Driver</p>
             <p className="text-sm sm:text-base font-semibold text-gray-900 leading-tight">Like Jenny</p>
             <div className="flex items-center gap-2 mt-1">
-              <button className="w-7 sm:w-8 h-7 sm:h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+              <button className="w-7 sm:w-8 h-7 sm:h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
                 <Phone className="w-3 sm:w-4 h-3 sm:h-4 text-gray-600" />
               </button>
-              <button className="w-7 sm:w-8 h-7 sm:h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+              <button className="w-7 sm:w-8 h-7 sm:h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
                 <MessageSquare className="w-3 sm:w-4 h-3 sm:h-4 text-gray-600" />
               </button>
             </div>
